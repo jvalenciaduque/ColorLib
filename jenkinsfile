@@ -3,7 +3,6 @@ pipeline {
 
   stages {
 
-    stages {
       stage('install') {
         steps {
           git branch: 'master', url: 'https://github.com/jvalenciaduque/ColorLib.git'
