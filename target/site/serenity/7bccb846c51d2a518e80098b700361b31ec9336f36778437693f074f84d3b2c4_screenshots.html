@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">RETO COLORLIB</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="4b106e4926796571fcd57e09aa239f22611181338b271ec2a5ee6604c932b431.html">Realizar Logueo En Colorlib.com</a></span>
+                > <span class="truncate-60"><a
+                    href="7bccb846c51d2a518e80098b700361b31ec9336f36778437693f074f84d3b2c4.html">Realizar logueo exitoso </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 07-02-2024 14:28</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Realizar Logueo En Colorlib.com </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="478dede7257abe7991ff96e77edb3e3b45a1faf9c45fb039f3b47a9c2390c012.html">Firefox
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="f55cf301e8f51d63aebeb8bc8dbe880df940586e2a502c7a3e24c2b639523f8f.html">Windows
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="3c07bffd5fe06edf199a85fa4da751b03f09f74a3629088ac0a48e3a84906a52.html">Firefox, Windows
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="a1a3ea4878672669fd991f477f0c440e5827f143a9b9c2d028a6d28f83355513.html">Historia De Usuario
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon fa-2x' title='FAILURE'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="failing-color">Realizar logueo exitoso
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given Deseo realizar logueo en el aplicativo colorlib<br>When Ingreso credenciales con &lt;user&gt; y &lt;password&gt;<br>And Presiono boton SignIn<br>Then Valido logueo exitoso con label en home<br>Given Deseo ingresar a Funcionalidad Block Validation<br>When Doy click en el submenu Form Validation<br>Then Verifico que se presenta pantalla de la funcionalidad con título Block Validation<br>Given Deseo realizar el diligenciamiento del formulario<br>When Diligencio todo los campos del formulario<br><table class='embedded'><thead><th>required</th><th>email</th><th>password</th><th>cPassword</th><th>date</th><th>url</th><th>digits</th><th>range</th></thead><tbody><tr><td>&lt;required&gt;</td><td>&lt;email&gt;</td><td>&lt;passwordF&gt;</td><td>&lt;cPassword&gt;</td><td>&lt;date&gt;</td><td>&lt;url&gt;</td><td>&lt;digits&gt;</td><td>&lt;range&gt;</td></tr></tbody></table><br>And Presiono boton Validate<br>Then Valido diligenciamiento exitoso<br>And Valido diligenciamiento fallido</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Assertion error: Expected: is (false) but: was (true)</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.AssertionError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>co.com.choucair.certification.RETOCOLORLIB.stepdefinitions.FillBlockValidation.validoDiligenciamientoExitoso(FillBlockValidation.java:40)<br />✽.Valido diligenciamiento exitoso(file:///C:/Users/jvalenciad/Documents/IntelliJ/co.com.choucair.certification.RETOCOLORLIB/src/test/resources/features/login_colorlib.feature:22)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                    <div class="panel-body">
+                        <a href="pagesource18238451250097339040.html" target="_blank" class="btn btn-info">HTML Source</a>
+                    </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="6604b6a769df76a47bbffa9ab766bd64d53b5df0ac8470d3f580859396c2f4e8.png" title=" 1: Realizar logueo exitoso ({user=demo, password=demo, required=Colorlib challenge, email=a@a.com, passwordF=demo45, cPassword=demo45, date=02/01/2024, url=https://colorlib.com/polygon/metis/login.html, digits=12356, range=12})" width="1920"/>
+                <img src="6604b6a769df76a47bbffa9ab766bd64d53b5df0ac8470d3f580859396c2f4e8.png" title=" Given Deseo realizar logueo en el aplicativo colorlib" width="1920"/>
+                <img src="6604b6a769df76a47bbffa9ab766bd64d53b5df0ac8470d3f580859396c2f4e8.png" title=" User open the browser" width="1920"/>
+                <img src="6604b6a769df76a47bbffa9ab766bd64d53b5df0ac8470d3f580859396c2f4e8.png" title=" User opens the Url pagina" width="1920"/>
+                <img src="6604b6a769df76a47bbffa9ab766bd64d53b5df0ac8470d3f580859396c2f4e8.png" title=" User open the browser (completed)" width="1920"/>
+                <img src="6604b6a769df76a47bbffa9ab766bd64d53b5df0ac8470d3f580859396c2f4e8.png" title=" Given Deseo realizar logueo en el aplicativo colorlib (completed)" width="1920"/>
+                <img src="b0d6776e99f2ba624dd984d181234cbd21cbeb0536a44ff3b150598c43736818.png" title=" When Ingreso credenciales con demo y demo" width="1920"/>
+                <img src="b0d6776e99f2ba624dd984d181234cbd21cbeb0536a44ff3b150598c43736818.png" title=" User fill login" width="1920"/>
+                <img src="b0d6776e99f2ba624dd984d181234cbd21cbeb0536a44ff3b150598c43736818.png" title=" User enters 'demo' into userField" width="1920"/>
+                <img src="49f01451330a258dce752942bcbaa04663e38988ff93fd4d000c1273382875f1.png" title=" User enters 'demo' into passwordField" width="1920"/>
+                <img src="49f01451330a258dce752942bcbaa04663e38988ff93fd4d000c1273382875f1.png" title=" User fill login (completed)" width="1920"/>
+                <img src="49f01451330a258dce752942bcbaa04663e38988ff93fd4d000c1273382875f1.png" title=" When Ingreso credenciales con demo y demo (completed)" width="1920"/>
+                <img src="eeeb4d2b93694bf831a6227311b443b438c4d636f263d51347474d79ffbf851d.png" title=" And Presiono boton SignIn" width="1920"/>
+                <img src="eeeb4d2b93694bf831a6227311b443b438c4d636f263d51347474d79ffbf851d.png" title=" User press button" width="1920"/>
+                <img src="eeeb4d2b93694bf831a6227311b443b438c4d636f263d51347474d79ffbf851d.png" title=" User clicks on loginButton" width="1920"/>
+                <img src="eeeb4d2b93694bf831a6227311b443b438c4d636f263d51347474d79ffbf851d.png" title=" User press button (completed)" width="1920"/>
+                <img src="eeeb4d2b93694bf831a6227311b443b438c4d636f263d51347474d79ffbf851d.png" title=" And Presiono boton SignIn (completed)" width="1920"/>
+                <img src="eeeb4d2b93694bf831a6227311b443b438c4d636f263d51347474d79ffbf851d.png" title=" Then Valido logueo exitoso con label en home" width="1920"/>
+                <img src="eeeb4d2b93694bf831a6227311b443b438c4d636f263d51347474d79ffbf851d.png" title=" Then home page visible should be (true)" width="1920"/>
+                <img src="eeeb4d2b93694bf831a6227311b443b438c4d636f263d51347474d79ffbf851d.png" title=" Then Valido logueo exitoso con label en home (completed)" width="1920"/>
+                <img src="be48ee49edf445a5d261ac29d73ca152e7a5c791b7652e2c276f20dff91d9bd9.png" title=" Given Deseo ingresar a Funcionalidad Block Validation" width="1920"/>
+                <img src="be48ee49edf445a5d261ac29d73ca152e7a5c791b7652e2c276f20dff91d9bd9.png" title=" User press button" width="1920"/>
+                <img src="be48ee49edf445a5d261ac29d73ca152e7a5c791b7652e2c276f20dff91d9bd9.png" title=" User clicks on forms" width="1920"/>
+                <img src="be48ee49edf445a5d261ac29d73ca152e7a5c791b7652e2c276f20dff91d9bd9.png" title=" User press button (completed)" width="1920"/>
+                <img src="95cfa609bf490f17c87ae9111cccbce6364fb9cd8dc34e66cef0c1cecc65b185.png" title=" Given Deseo ingresar a Funcionalidad Block Validation (completed)" width="1920"/>
+                <img src="498d4ff6f938a6042438b02d746858d5d721dcca4566a702d84e27b712d406cd.png" title=" When Doy click en el submenu Form Validation" width="1920"/>
+                <img src="498d4ff6f938a6042438b02d746858d5d721dcca4566a702d84e27b712d406cd.png" title=" User press button" width="1920"/>
+                <img src="498d4ff6f938a6042438b02d746858d5d721dcca4566a702d84e27b712d406cd.png" title=" User clicks on formsValidation" width="1920"/>
+                <img src="498d4ff6f938a6042438b02d746858d5d721dcca4566a702d84e27b712d406cd.png" title=" User press button (completed)" width="1920"/>
+                <img src="498d4ff6f938a6042438b02d746858d5d721dcca4566a702d84e27b712d406cd.png" title=" When Doy click en el submenu Form Validation (completed)" width="1920"/>
+                <img src="498d4ff6f938a6042438b02d746858d5d721dcca4566a702d84e27b712d406cd.png" title=" Then Verifico que se presenta pantalla de la funcionalidad con t&iacute;tulo Block Validation" width="1920"/>
+                <img src="498d4ff6f938a6042438b02d746858d5d721dcca4566a702d84e27b712d406cd.png" title=" Then block visible should be (true)" width="1920"/>
+                <img src="498d4ff6f938a6042438b02d746858d5d721dcca4566a702d84e27b712d406cd.png" title=" Then Verifico que se presenta pantalla de la funcionalidad con t&iacute;tulo Block Validation (completed)" width="1920"/>
+                <img src="a0c74bd8cac5a59e2c47feb94ff16307325e67ef2d8d8a1d32d7ee885c68b9bf.png" title=" Given Deseo realizar el diligenciamiento del formulario" width="1920"/>
+                <img src="a0c74bd8cac5a59e2c47feb94ff16307325e67ef2d8d8a1d32d7ee885c68b9bf.png" title=" User scroll" width="1920"/>
+                <img src="a0c74bd8cac5a59e2c47feb94ff16307325e67ef2d8d8a1d32d7ee885c68b9bf.png" title=" Given Deseo realizar el diligenciamiento del formulario (completed)" width="1920"/>
+                <img src="7699ed84d8b52e91c8e782dca803b87eee2dfcc652652502292131bdb5b6c79d.png" title=" When Diligencio todo los campos del formulario
+| required | email | password | cPassword | date | url | digits | range |
+| Colorlib challenge | a@a.com | demo45 | demo45 | 02/01/2024 | https://colorlib.com/polygon/metis/login.html | 12356 | 12 |" width="1920"/>
+                <img src="7699ed84d8b52e91c8e782dca803b87eee2dfcc652652502292131bdb5b6c79d.png" title=" User fill form" width="1920"/>
+                <img src="7699ed84d8b52e91c8e782dca803b87eee2dfcc652652502292131bdb5b6c79d.png" title=" User clicks on date" width="1920"/>
+                <img src="b2eb141afe229c313ab18b0b9ee82f9a33d5c4b484b5884b2c0f29be7b4ba5e8.png" title=" User enters 'Colorlib challenge' into required" width="1920"/>
+                <img src="9d2af76e1e49590b95d45d86c33ab50d59f6600a41de737a9545a92c3502aea0.png" title=" User enters 'a@a.com' into email" width="1920"/>
+                <img src="85589c64e6b471590361eec8fd686dff3cf924391d858b31b868309dcbd5b6e9.png" title=" User enters 'demo45' into password" width="1920"/>
+                <img src="e2e85f5786ca2a27f0ddc7bb404657833297fdb0a41c80fff4fc65ce857a4051.png" title=" User enters 'demo45' into confirmPassword" width="1920"/>
+                <img src="b456f61a205f4caabef4f2964b975bc0806e4ecf8d35c6acb7599e37350296ad.png" title=" User enters 'https://colorlib.com/polygon/metis/login.html' into url" width="1920"/>
+                <img src="7169e1fc1f49a78b41cef90cd46b5efa2ffd574e220d48c2f3930d077163edc9.png" title=" User enters '12356' into digits" width="1920"/>
+                <img src="c9534527321fc8d341e2daab89ff09cac01fa9a25453d67c8a54f30cdf9253f2.png" title=" User enters '12' into range" width="1920"/>
+                <img src="b40086f37fd5cda081423e19e6ca7de461a66565d1afb9b934997c1c9c3a8c15.png" title=" User fill form (completed)" width="1920"/>
+                <img src="b40086f37fd5cda081423e19e6ca7de461a66565d1afb9b934997c1c9c3a8c15.png" title=" When Diligencio todo los campos del formulario
+| required | email | password | cPassword | date | url | digits | range |
+| Colorlib challenge | a@a.com | demo45 | demo45 | 02/01/2024 | https://colorlib.com/polygon/metis/login.html | 12356 | 12 | (completed)" width="1920"/>
+                <img src="72d3f9106fa57c139164be26759aaa54ec543d4d96925ca14c1948915feabb76.png" title=" And Presiono boton Validate" width="1920"/>
+                <img src="72d3f9106fa57c139164be26759aaa54ec543d4d96925ca14c1948915feabb76.png" title=" User press button" width="1920"/>
+                <img src="72d3f9106fa57c139164be26759aaa54ec543d4d96925ca14c1948915feabb76.png" title=" User clicks on policy" width="1920"/>
+                <img src="72d3f9106fa57c139164be26759aaa54ec543d4d96925ca14c1948915feabb76.png" title=" User press button (completed)" width="1920"/>
+                <img src="024b2d01eebf9b2b514f07e50c271015495a83eb2b6a9a33ce450ee581346d34.png" title=" User press button" width="1920"/>
+                <img src="024b2d01eebf9b2b514f07e50c271015495a83eb2b6a9a33ce450ee581346d34.png" title=" User clicks on validate" width="1920"/>
+                <img src="024b2d01eebf9b2b514f07e50c271015495a83eb2b6a9a33ce450ee581346d34.png" title=" User press button (completed)" width="1920"/>
+                <img src="024b2d01eebf9b2b514f07e50c271015495a83eb2b6a9a33ce450ee581346d34.png" title=" And Presiono boton Validate (completed)" width="1920"/>
+                <img src="024b2d01eebf9b2b514f07e50c271015495a83eb2b6a9a33ce450ee581346d34.png" title=" Then Valido diligenciamiento exitoso" width="1920"/>
+                <img src="024b2d01eebf9b2b514f07e50c271015495a83eb2b6a9a33ce450ee581346d34.png" title=" Then error visible should be (false): <span class='failing-color'>FAILURE</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.7.1</span>
+</div>
+</body>
+</html>
