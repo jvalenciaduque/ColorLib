@@ -12,7 +12,7 @@ pipeline {
     stage('Build') {
       steps {
         withGradle {
-           sh './gradlew clean build --stacktrace -i'
+           bat './gradlew clean build --stacktrace -i'
         }
       }
     } // Build
@@ -25,7 +25,7 @@ pipeline {
         usernameVariable: 'MVN_USERNAME')]) {
 
           withGradle {
-            sh """
+            bat """
               ./gradlew -i --stacktrace publish \
                   -PMVN_USERNAME=${MVN_USERNAME} \
                   -PMVN_PASSWORD=${MVN_PASSWORD} \
