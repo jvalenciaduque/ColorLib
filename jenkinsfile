@@ -16,7 +16,7 @@ pipeline {
                 -Dsonar.projectKey=${serviceName} \
                 -Dsonar.host.url=${env.SONAR_HOST_URL} \
                 -Dsonar.login=${env.SONAR_AUTH_TOKEN} \
-                -Dsonar.projectName=${Sonar 9.8.0.63668} \
+                -Dsonar.projectName=${"Sonar 9.8.0.63668"} \
                 -Dsonar.projectVersion=${BUILD_NUMBER}"
             }
           }
