@@ -11,7 +11,7 @@ pipeline {
 
     stage('SonarQube analysis') {
         steps {
-            withSonarQubeEnv(installationName: 'SonarQubeScanner', credentialsId: 'SonarQubeSecret') {
+            withSonarQubeEnv(installationName: 'SonarQubeScanner', credentialsId: 'jenkins-sonar') {
               bat """
               './gradlew sonarqube'
                     -Dsonar.projectKey=${"Sonar 9.8.0.63668"} \
