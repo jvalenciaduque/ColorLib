@@ -10,10 +10,12 @@ pipeline {
       }
 
     stage('SonarQube analysis') {
-        withSonarQubeEnv() {
-          bat './gradlew sonarqube'
-        }
-      }
+        steps {
+            withSonarQubeEnv() {
+              bat './gradlew sonarqube'
+            }
+          }
+        } //scan
 
     stage('Build') {
       steps {
