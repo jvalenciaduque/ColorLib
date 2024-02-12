@@ -14,10 +14,10 @@ pipeline {
             withSonarQubeEnv(installationName: 'SonarQubeScanner', credentialsId: 'SonarQubeSecret') {
               bat """
               './gradlew sonarqube'
-                    -Dsonar.projectKey=${serviceName} \
+                    -Dsonar.projectKey=${"Sonar 9.8.0.63668"} \
                     -Dsonar.host.url=${env.SONAR_HOST_URL} \
                     -Dsonar.login=${env.SONAR_AUTH_TOKEN} \
-                    -Dsonar.projectName=${"Sonar 9.8.0.63668"} \
+                    -Dsonar.projectName=${"PipelineColorLib"} \
                     -Dsonar.projectVersion=${BUILD_NUMBER}"
                 """
             }
