@@ -9,13 +9,11 @@ pipeline {
         }
       }
 
-     stage('scan') {
-       steps {
-         withSonarQubeEnv(installationName: 'Sonar 9.8.0.63668') {
-            bat './mvnw clean org.sonarsource.scanner.maven:sonar-maven-plugin:9.8.0.63668:sonar'
-         }
-       }
-     } // Scan
+    stage('SonarQube analysis') {
+        withSonarQubeEnv() {
+          bat './gradlew sonarqube'
+        }
+      }
 
     stage('Build') {
       steps {
