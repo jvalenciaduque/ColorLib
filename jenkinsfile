@@ -11,8 +11,13 @@ pipeline {
 
     stage('SonarQube analysis') {
         steps {
-            withSonarQubeEnv(installationName: 'SonarQubeScanner') {
+            withSonarQubeEnv(installationName: 'SonarQubeScanner', credentialsId: 'SonarQubeSecret') {
               bat './gradlew sonarqube'
+                -Dsonar.projectKey=${serviceName} \
+                -Dsonar.host.url=${env.SONAR_HOST_URL} \
+                -Dsonar.login=${env.SONAR_AUTH_TOKEN} \
+                -Dsonar.projectName=${Sonar 9.8.0.63668} \
+                -Dsonar.projectVersion=${BUILD_NUMBER}"
             }
           }
         } //scan
