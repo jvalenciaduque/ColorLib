@@ -16,11 +16,6 @@ repositories {
 }
 
 buildscript {
-    dependencies.classpath
-    "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin: ${project.properties.get('sonarqubeVersion', 3.0)}"
-}
-
-buildscript {
     repositories {
         maven {
             url "https://plugins.gradle.org/m2/"
