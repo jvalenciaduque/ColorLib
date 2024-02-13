@@ -1,4 +1,4 @@
-group = 'co.com.choucair.certificacion.AUTOMATIZACIONREST'
+group = 'co.com.choucair.certification.RETOCOLORLIB'
 version = '1.0-SNAPSHOT'
 
 apply plugin: 'java'
@@ -28,6 +28,12 @@ repositories {
     mavenCentral()
     maven {
         url 'https://pkgs.dev.azure.com/DEV-FormacionCH/f11a2ddb-f565-44a3-8710-e9e1472d29ee/_packaging/Choucair/maven/v1'
+    }
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
     }
 }
 
