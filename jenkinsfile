@@ -13,7 +13,7 @@ pipeline {
         steps {
             withSonarQubeEnv(installationName: 'Sonar 9.8.0.63668', credentialsId: 'jenkins-sonar') {
               bat """
-              ./gradlew sonarqube \
+              ./gradlew sonar \
                     -Dsonar.projectKey=${"UserJenkins"} \
                     -Dsonar.host.url=${env.SONAR_HOST_URL} \
                     -Dsonar.login=${env.SONAR_AUTH_TOKEN} \

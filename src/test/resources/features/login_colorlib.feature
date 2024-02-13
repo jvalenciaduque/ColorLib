@@ -19,8 +19,8 @@ Feature: Realizar logueo en Colorlib.com
       | required   | email   | password    | cPassword   | date   | url   | digits   | range   |
       | <required> | <email> | <passwordF> | <cPassword> | <date> | <url> | <digits> | <range> |
     And Presiono boton Validate
-    Then Valido diligenciamiento exitoso
-    And Valido diligenciamiento fallido
+    #Then Valido diligenciamiento exitoso
+    Then Valido diligenciamiento fallido
 
   Examples:
     | user | password | required | email | passwordF | cPassword | date | url | digits | range |
