@@ -1,5 +1,5 @@
 pipeline {
-  agent JVALENCIAD
+  agent { label 'JVALENCIAD' }
 
   stages {
 
