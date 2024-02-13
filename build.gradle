@@ -22,6 +22,17 @@ buildscript {
         }
     }
     dependencies {
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:4.0.0.2929"
+    }
+}
+
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
         classpath "net.serenity-bdd:serenity-gradle-plugin:3.3.2"
     }
 }
