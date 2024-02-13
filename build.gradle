@@ -31,12 +31,6 @@ repositories {
     }
 }
 
-jacocoTestReport {
-    reports {
-        xml.enabled true
-    }
-}
-
 dependencies {
     //DEPENDENCIAS DE SERENITY - TECNOLOGIAS WEB
     implementation 'net.serenity-bdd:serenity-cucumber:3.3.2'
