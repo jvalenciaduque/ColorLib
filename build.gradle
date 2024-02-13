@@ -4,6 +4,7 @@ version = '1.0-SNAPSHOT'
 apply plugin: 'java'
 apply plugin: 'java-library'
 apply plugin: "net.serenity-bdd.serenity-gradle-plugin"
+apply plugin: 'org.sonarqube'
 compileJava.options.encoding = "UTF-8"
 compileTestJava.options.encoding = "UTF-8"
 def versionSerenity='3.7.1'
@@ -13,6 +14,12 @@ def bonigarcia = "5.4.1"
 repositories {
     mavenCentral()
 }
+
+buildscript {
+    dependencies.classpath
+    "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin: ${project.properties.get('sonarqubeVersion', 3.0)}"
+}
+
 buildscript {
     repositories {
         maven {
