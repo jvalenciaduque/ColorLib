@@ -1,8 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Realizar logueo en Colorlib.com" skipped="0" tests="1" time="31.15" timestamp="2024-02-07 02:28:29"><testcase name="Realizar logueo exitoso"><failure message="&#10;Expected: is &lt;false&gt;&#10;     but: was &lt;true&gt;" type="java.lang.AssertionError">
-Expected: is &lt;false&gt;
-     but: was &lt;true&gt;</failure><system-err>
-Expected: is &lt;false&gt;
-     but: was &lt;true&gt;&#13;
-co.com.choucair.certification.RETOCOLORLIB.stepdefinitions.FillBlockValidation.validoDiligenciamientoExitoso(FillBlockValidation.java:40)&#13;
-✽.Valido diligenciamiento exitoso(file:///C:/Users/jvalenciad/Documents/IntelliJ/co.com.choucair.certification.RETOCOLORLIB/src/test/resources/features/login_colorlib.feature:22)&#13;
-</system-err></testcase></testsuite>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Realizar logueo en Colorlib.com" skipped="0" tests="1" time="24.22" timestamp="2024-02-13 02:37:52"><testcase name="Realizar logueo exitoso"/></testsuite>
