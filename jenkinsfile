@@ -17,7 +17,7 @@ pipeline {
                     -Dsonar.projectKey=${"Sonar 9.8.0.63668"} \
                     -Dsonar.host.url=${env.SONAR_HOST_URL} \
                     -Dsonar.login=${env.SONAR_AUTH_TOKEN} \
-                    -Dsonar.projectName=${"RETOCOLORLIB"} \
+                    -Dsonar.projectName=${"co.com.choucair.certification.RETOCOLORLIB"} \
                     -Dsonar.projectVersion=${BUILD_NUMBER}"
                 """
             }
